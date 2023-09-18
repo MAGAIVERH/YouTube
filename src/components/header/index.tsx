@@ -15,6 +15,7 @@ import {
     ButtonVideo,
     ButtonV,
     ButtonUsuario,
+   
     } from "./styles";
 import HamburgerIcon from '../../assets/hamburger.png';
 import Logo from '../../assets/YouTube-Logo.png';
@@ -64,7 +65,10 @@ function Header({openMenu, setOpenMenu}: IProps){
                     </SearchButton>
 
                     <ButtonMicro>
-                        <ButtonM alt="" src={Microfone}/>
+                       
+                            <ButtonM alt="" src={Microfone}/>
+                       
+                        
                     </ButtonMicro>
                 </SearchContainer>
 
@@ -82,9 +86,6 @@ function Header({openMenu, setOpenMenu}: IProps){
                     <ButtonUsuario onClick={() => navigate('/login')}>
                        <span>CM</span> 
                     </ButtonUsuario>
-
-                
-                   
                 </HeaderButton>
             
         </Container>

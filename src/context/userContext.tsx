@@ -23,7 +23,7 @@ export const UserStorage = ({children}: any ) => {
 
 
     const handleLogin = (email: string, password: string) => {
-        api.post('/user/sing-in', {email , password}).then(({data}) => {
+        api.post('/user/sign-in', {email , password}).then(({data}) => {
             setLogin(true);
             //Puxar os dados do usuario
 

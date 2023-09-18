@@ -15,10 +15,6 @@ export const Container = styled.div<{ openMenu: boolean}>`
     top: 55px;
     z-index:3;
    
-    
-    
-   
-
    
 `;
 export const MenuItem = styled.div<{openMenu: boolean}>`

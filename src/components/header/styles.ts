@@ -13,6 +13,7 @@ export const Container = styled.header`
     top:0;
     z-index:2;
     overflow-x: hidden;
+    overflow-y: hidden;
     
    
     
@@ -25,25 +26,40 @@ export const LogoContainer = styled.div`
 
 export const ButtonContainer = styled.div`
     width: 20px;
-    height:40px;
-    margin-left: 10px;
-    margin-right:25px;
-    margin-top:-2px;
+    height: 40px;
+    padding-left:10px;
+    padding-right:10px;
+    margin-left: 5px;
+    margin-right: 35px;
+    margin-top: -2px;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor:pointer;
+    cursor: pointer;
     border-radius: 50%;
-   
+    position: relative; /* Adiciona posicionamento relativo para elementos filhos posicionados relativamente a este */
+    
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: transparent; /* Define a cor de fundo inicial */
+        transition: background-color 0.3s ease-in-out;
+        z-index: -1; /* Coloca o círculo atrás do ícone */
+    }
 
-:hover{
-        background-color: #E0E0E0;
-       
+    &:hover::before {
+        background-color: #E0E0E0; /* Define a cor de fundo no hover */
     }
 `;
 
+
 export const ButtonIcon = styled.img`
-    width: 30px;
+    width: 25px;
     border-radius:30%;
 `;
 
@@ -90,42 +106,48 @@ export const SearchButton = styled.div`
 `;
 
 export const ButtonMicro = styled.div`
-    width: 20px;
-    height:40px;
-    margin-top:-2px;
+    width: 30px;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor:pointer;
+    cursor: pointer;
     border-radius: 50%;
-   
+    transition: background-color 0.3s ease-in-out, border-width 0.3s ease-in-out;
 
-:hover{
-        background-color: #f2f2f2;
-       
+    :hover {
+        background-color: #E0E0E0;
+        border: 5px solid #E0E0E0;
+        border-radius: 50%;
     }
-      
-
 `;
 
 export const ButtonM = styled.img`
     width: 30px;
-    border-radius:30%;
-    margin-top:9px;
-    margin-left:-970px;
+    height: 30px;
+    border-radius: 30%;
+    margin-top: 9px;
+    margin-left: -970px;
+    object-fit: cover;
+    border-radius: 50%;
 `;
+
 
 export const HeaderButton = styled.div`
     width: 200px;
     display: flex;
-    margin-top:5px;
+    margin-top:-10px;
+    margin-left:-100px;
     column-gap:15px;
 
 `;
 
 export const ButtonSino = styled.div`
-    width: 20px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -133,64 +155,82 @@ export const ButtonSino = styled.div`
     border-radius: 50%;
 
     :hover{
-        background-color: #f2f2f2;
+        background-color: #E0E0E0;
+        border: 5px solid #E0E0E0;
+        border-radius: 50%;
        
     }
 `;
 
 export const ButtonS = styled.img`
-     width: 30px;
-     height:35px;
+    width: 30px;
+    height:30px;
     border-radius:30%;
     margin-left:-410px;
     margin-top:30px;
 `;
 
+
 export const ButtonVideo = styled.div`
-    width: 20px;
-    height:40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor:pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+
+  :hover {
+    background-color: #E0E0E0;
+    border: 5px solid #E0E0E0; /* Adicione a borda aqui */
     border-radius: 50%;
-
-    :hover{
-        background-color: #f2f2f2;
-       
-    }
-
+  }
 `;
 
 export const ButtonV = styled.img`
-    width: 40px;
-     height:30px;
-    border-radius:30%;
-    margin-left:-350px;
-    margin-top:30px;
+  width: 30px;
+  height: 30px;
+  border-radius: 30%;
+  margin-left: -350px;
+  margin-top: 30px;
 `;
+
+
 
 export const ButtonUsuario = styled.span`
-    width: 40px;
-    height:40px;
+  position: relative;
+  width: 30px; /* Largura e altura iguais para um círculo */
+  height: 30px; /* Largura e altura iguais para um círculo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-left: -155px;
+  margin-top: 15px;
+  background-color: transparent; /* Adicione um fundo transparente para evitar bordas estranhas */
+
+  /* Estilos para as iniciais */
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%; /* Largura e altura iguais para um círculo */
     display: flex;
     justify-content: center;
-    text-align:center;
-    cursor:pointer;
+    align-items: center; /* Centralizar verticalmente as letras */
+  }
+
+  :hover {
+    background-color: #E0E0E0;
+    border: 5px solid #E0E0E0;
     border-radius: 50%;
-    margin-left:-155px;
-    margin-top:25px;
+  }
 
-
-    :hover{
-        background-color: #f2f2f2;
-        width: 60px;
-        height:30px;
-        border-radius:50%;
-        padding-top:5px;
-       
-    }
 `;
+
 
 
 
