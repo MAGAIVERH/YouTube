@@ -10,6 +10,8 @@ function Shorts(){
         <ShortsPage />
         <ShortsPage />
         <ShortsPage />
+        <ShortsPage />
+        <ShortsPage />
         
        
       </Container>  

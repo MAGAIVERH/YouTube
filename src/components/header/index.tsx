@@ -73,7 +73,6 @@ function Header({openMenu, setOpenMenu}: IProps){
                 </SearchContainer>
 
 
-
                 <HeaderButton>
                     <ButtonSino>
                         <ButtonS alt="" src={Sino}/>

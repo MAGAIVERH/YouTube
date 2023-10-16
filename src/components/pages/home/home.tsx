@@ -1,7 +1,9 @@
 import VideoComponent from "../../videoComponent";
 import {Container, } from "./styles";
 import ShortsPage from "../shortsPage/shortsPage";
-import Shorts from "../../../assets/shorts.png";
+import axios from "axios";
+import { useState, useEffect } from "react";
+
 
 
 interface IProps {
@@ -9,6 +11,8 @@ interface IProps {
   }
 
 function Home({openMenu}: IProps){
+ 
+
 
     const numberOfShortsPages = openMenu ? 4 : 5;
 
@@ -35,34 +39,14 @@ function Home({openMenu}: IProps){
             <VideoComponent />
             <VideoComponent />
             <VideoComponent /> 
+           
             {Array.from({ length: numberOfShortsPages }).map((_, index) => (
              <ShortsPage key={index} />
             ))}
-              <VideoComponent />
-            <VideoComponent />
-            <VideoComponent />
-            <VideoComponent />
-            <VideoComponent />
-            <VideoComponent />
-            <VideoComponent />
-            <VideoComponent />
-            <VideoComponent />
-            <VideoComponent />
-            <VideoComponent />
-            <VideoComponent />
-            <VideoComponent />
-            <VideoComponent />
-            <VideoComponent />
-            <VideoComponent /> 
-            <VideoComponent />
-            <VideoComponent />
-            <VideoComponent />
-            <VideoComponent /> 
-          
+       
         
         </Container> 
     )
 };
 
 export default Home;
-
